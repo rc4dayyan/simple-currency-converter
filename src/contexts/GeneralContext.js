@@ -9,7 +9,7 @@ const GeneralContextProvider = (props) => {
 
     const [ apikey, setApikey ] = useState('e972a19b09ea90cf3ff34ec12359bd7b1');
 
-    const searchExchangeRate = (fromnya='EUR', tonya='IDR') => {        
+    const searchExchangeRate = (fromnya='USD', tonya='IDR') => {        
         if(fromnya === "IDR"){
             fromnya = tonya;
             tonya = fromnya;

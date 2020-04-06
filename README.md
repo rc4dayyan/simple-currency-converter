@@ -13,3 +13,6 @@ Live exchange rates was provided by: <a href="https://exchangeratesapi.io" targe
 
 ### Usage
 Run `npm start`<br/><br/><br/>
+
+### Live Demo
+https://exchange.rplstemanika.com/

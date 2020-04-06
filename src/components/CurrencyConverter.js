@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import { GeneralContext } from '../contexts/GeneralContext';
 import NumberFormat from 'react-number-format';
 import { 
@@ -12,7 +12,7 @@ import { CurrencyOptions } from './CurrencyOptions';
 
 const CurrencyConverter = () => {
 
-    const [ country, setCountry ] = useState(CurrencyOptions);
+    const [ country ] = useState(CurrencyOptions);
 
     const { exchangeRate, searchExchangeRate } = useContext(GeneralContext);
 
@@ -34,17 +34,21 @@ const CurrencyConverter = () => {
         searchExchangeRate(fromCurrency, to);
     }
 
-    const nilaiExchange = (rate = fromValue) => {
+    const nilaiExchange = useCallback(
+        (rate = fromValue) => {
         let nilai = 0;
         nilai = rate*exchangeRate;
 
         return nilai;
-    }
+    }, [exchangeRate, fromValue])
 
     const getSymbol = (currency) => {
-        let cur = country.find(el => {
-            if(el.value === currency)
-                return el;
+        let cur = country.find(el => {  
+            let nilai = '';
+            if(el.value === currency)  {
+                nilai = el;
+            }
+            return nilai
         });
         return (cur !== '-') ? cur.symbol : '';
     }
@@ -58,7 +62,7 @@ const CurrencyConverter = () => {
 
     useEffect(() => {
         setToValue(nilaiExchange());
-    },[exchangeRate])
+    },[exchangeRate, nilaiExchange])
 
     return (
         <Segment placeholder>

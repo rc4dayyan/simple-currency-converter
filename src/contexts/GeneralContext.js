@@ -7,19 +7,12 @@ const GeneralContextProvider = (props) => {
 
     const [ exchangeRate, setExchangeRate ] = useState(1);
 
-    const [ apikey, setApikey ] = useState('e972a19b09ea90cf3ff34ec12359bd7b1');
-
     const searchExchangeRate = (fromnya='USD', tonya='IDR') => {        
-        if(fromnya === "IDR"){
-            fromnya = tonya;
-            tonya = fromnya;
-        }
-        axios.get('https://api.ichronoz.net/exchangeV2?curFrom='+fromnya+'&curTo='+tonya+'&api='+apikey)
+        axios.get('https://api.exchangeratesapi.io/latest?base='+fromnya+'&symbols='+tonya)
             .then(res => {
                 
-                console.log('exchange:',res.data.rate);
-
-                setExchangeRate(res.data.rate);
+                // console.log('exchange:',res.data.rates);
+                setExchangeRate(res.data.rates[tonya]);
 
             })
             .catch(error => {

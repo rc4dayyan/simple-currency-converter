@@ -46,9 +46,14 @@
 }
 .no-border{
   border: none;
-  text-align: center;
+  
 }
 .text-exchange{
-  text-align: center;
   padding: 15px;
+}
+.cur-symbol{
+  font-size: 50%;
+  vertical-align: super;
+  font-weight: 100;
+  padding-right: 20px;
 }

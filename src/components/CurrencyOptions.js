@@ -1,5 +1,5 @@
 export function CurrencyOptions() {
-    const a = [
+    return [
         {
             "text": "EUR - Euro",
             "key": "eu",
@@ -231,7 +231,5 @@ export function CurrencyOptions() {
             "flag": "se",
             "symbol": "kr"
         }
-    ]
-
-    return a;
+    ];
 }

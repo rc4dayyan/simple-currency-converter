@@ -7,8 +7,7 @@ import {
     Segment, 
     Dropdown, 
     Button, 
-    Header,
-    Input } from 'semantic-ui-react';
+    Header} from 'semantic-ui-react';
 import { CurrencyOptions } from './CurrencyOptions';
 
 const CurrencyConverter = () => {
@@ -42,6 +41,21 @@ const CurrencyConverter = () => {
         return nilai;
     }
 
+    const getSymbol = (currency) => {
+        let cur = country.find(el => {
+            if(el.value === currency)
+                return el;
+        });
+        return (cur !== '-') ? cur.symbol : '';
+    }
+
+    const switchCurrency = () => {
+        let temp = fromCurrency;
+        setFromCurrency(toCurrency);
+        setToCurrency(temp);
+        searchExchangeRate(toCurrency, fromCurrency);
+    }
+
     useEffect(() => {
         setToValue(nilaiExchange());
     },[exchangeRate])
@@ -73,6 +87,7 @@ const CurrencyConverter = () => {
                         </div>
                         <div className="text-exchange">
                             <h1>
+                                <span className="cur-symbol">{getSymbol(fromCurrency)}</span>
                                 <input type="text" placeholder='0' value={fromValue} onChange={e => {
                                     const amount = e.target.value;
                                     setFromValue(amount);
@@ -84,7 +99,7 @@ const CurrencyConverter = () => {
                     </Grid.Column>
                     
                     <Grid.Column width={2}>
-                        <Button circular className="huge" color='twitter' icon={<Icon name='exchange' />} />
+                        <Button circular className="huge" color='twitter' icon={<Icon name='exchange' />} onClick={switchCurrency} />
                     </Grid.Column>
                     
                     <Grid.Column width={7}>
@@ -104,8 +119,8 @@ const CurrencyConverter = () => {
                         </div>
                         <div className="text-exchange">
                             <h1>
-                                <span>{country.key}</span>
-                                <NumberFormat value={toValue} displayType={'text'} thousandSeparator={true} />
+                                <span className="cur-symbol">{getSymbol(toCurrency)}</span>
+                                <NumberFormat value={toValue.toFixed(2)} displayType={'text'} thousandSeparator={true} />
                             </h1>
                         </div>
                         

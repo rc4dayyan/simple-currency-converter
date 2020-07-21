@@ -16,7 +16,7 @@ const GeneralContextProvider = (props) => {
 
             })
             .catch(error => {
-                console.log('Sorry! we are under maintenance [exchange rate]');
+                console.log('Sorry! we are under maintenance [exchange rate]', error);
                 
             });
     }

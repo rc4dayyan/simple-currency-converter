@@ -24,7 +24,6 @@ const GeneralContextProvider = (props) => {
     useEffect(() => {
         searchExchangeRate();
     }, [])
-
     return (  
         <GeneralContext.Provider value={{ exchangeRate, searchExchangeRate }}>
             {props.children}

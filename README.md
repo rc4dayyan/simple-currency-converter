@@ -15,4 +15,4 @@ Live exchange rates was provided by: <a href="https://exchangeratesapi.io" targe
 Run `npm start`<br/><br/><br/>
 
 ### Live Demo
-https://exchange.rplstemanika.com/
+https://rc4dayyan.github.io/simple-currency-converter

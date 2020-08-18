@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/simple-currency-converter/static/css/main.c3bc11d5.chunk.css",
+    "main.js": "/simple-currency-converter/static/js/main.a0cb9f8b.chunk.js",
+    "main.js.map": "/simple-currency-converter/static/js/main.a0cb9f8b.chunk.js.map",
+    "runtime-main.js": "/simple-currency-converter/static/js/runtime-main.63f786f0.js",
+    "runtime-main.js.map": "/simple-currency-converter/static/js/runtime-main.63f786f0.js.map",
+    "static/css/2.755e63a5.chunk.css": "/simple-currency-converter/static/css/2.755e63a5.chunk.css",
+    "static/js/2.e42a9f69.chunk.js": "/simple-currency-converter/static/js/2.e42a9f69.chunk.js",
+    "static/js/2.e42a9f69.chunk.js.map": "/simple-currency-converter/static/js/2.e42a9f69.chunk.js.map",
+    "index.html": "/simple-currency-converter/index.html",
+    "precache-manifest.a60e71978597c707083ea98702824bb8.js": "/simple-currency-converter/precache-manifest.a60e71978597c707083ea98702824bb8.js",
+    "service-worker.js": "/simple-currency-converter/service-worker.js",
+    "static/css/2.755e63a5.chunk.css.map": "/simple-currency-converter/static/css/2.755e63a5.chunk.css.map",
+    "static/css/main.c3bc11d5.chunk.css.map": "/simple-currency-converter/static/css/main.c3bc11d5.chunk.css.map",
+    "static/js/2.e42a9f69.chunk.js.LICENSE.txt": "/simple-currency-converter/static/js/2.e42a9f69.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/simple-currency-converter/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63f786f0.js",
+    "static/css/2.755e63a5.chunk.css",
+    "static/js/2.e42a9f69.chunk.js",
+    "static/css/main.c3bc11d5.chunk.css",
+    "static/js/main.a0cb9f8b.chunk.js"
+  ]
+}
